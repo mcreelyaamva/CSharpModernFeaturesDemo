@@ -47,3 +47,16 @@ public partial class VerificationConfig
 
     public partial int TimeoutSeconds => 30;
 }
+
+/* C# 14 - Field Keyword
+public partial class VerificationConfig
+{
+    public partial string ServiceEndpoint
+    {
+        get => field;
+        set => field = value ?? throw new ArgumentNullException(nameof(value));
+    }
+    
+    public partial int TimeoutSeconds => 30;
+}
+*/ 

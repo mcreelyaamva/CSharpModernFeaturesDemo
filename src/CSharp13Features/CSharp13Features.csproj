@@ -14,7 +14,6 @@
 
 	<ItemGroup>
 		<Using Include="CSharp13Features" />
-		<Using Include="CSharp13Features.SupplementalDemos" />
 		<Using Include="CSharpUtilities" />
 		<Using Include="System.Diagnostics.CodeAnalysis" />
 		<Using Include="System.Globalization" />

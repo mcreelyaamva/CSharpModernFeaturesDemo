@@ -13,7 +13,7 @@ public static class Demo14_Null_Conditional_Assignment
 
         #region Assign order using traditional null check
 
-        // retrieve a customer (could be null)
+        // retrieve a customer (could be null - isn't)
         var customer1 = Customer.GetCustomer(1);
 
         if (customer1 is not null)
@@ -26,7 +26,7 @@ public static class Demo14_Null_Conditional_Assignment
 
         #region Assign order using null-conditional assignment
 
-        // retrieve a customer (could be null)
+        // retrieve a customer (could be null - isn't)
         var customer2 = Customer.GetCustomer(2);
 
         // Using null-conditional assignment
@@ -37,7 +37,7 @@ public static class Demo14_Null_Conditional_Assignment
 
         #region Assign order using null-conditional assignment, null value
 
-        // retrieve a customer (could be null)
+        // retrieve a customer (is null)
         var customer3 = Customer.GetCustomer(3);
 
         // Using null-conditional assignment

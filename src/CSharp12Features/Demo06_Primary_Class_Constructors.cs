@@ -147,8 +147,9 @@ public class LicenseValidationService
     public string GetState() => _defaultState;
 }
 
-/*
+
 // C# 12 Primary Constructor - clean and concise!
+/*
 public class LicenseValidationService(
     ISimpleLogger logger,
     string defaultState,
@@ -222,6 +223,38 @@ public class ImmutableLicenseService(
         _logger = newLogger; // this does not compile, parameter is protected by readonly field
     }
     */
+}
+
+// Can still have additional constructors
+public class LicenseVerificationService(
+    ISimpleLogger logger,
+    string defaultState,
+    int maxRetries = 3)
+{
+    private string ServiceName { get; set; } = string.Empty;
+
+    // must chain to primary constructor
+    public LicenseVerificationService(
+        ISimpleLogger logger,
+        string defaultState,
+        int maxRetries = 3, 
+        string serviceName = "NA") : this(logger, defaultState, maxRetries)
+    {
+        // use additional constructor logic
+        ServiceName = serviceName;
+    }
+
+    public string VerifyLicense(string licenseNumber)
+    {
+        logger.Log($"Verifying license {licenseNumber} for state {defaultState}");
+        logger.Log($"Max retries configured: {maxRetries}");
+        logger.Log($"Service Name: {ServiceName}");
+
+        // Simulate validation
+        return $"License {licenseNumber} is valid in {defaultState}";
+    }
+
+    public string GetState() => defaultState;
 }
 
 // Simple logger for demo purposes

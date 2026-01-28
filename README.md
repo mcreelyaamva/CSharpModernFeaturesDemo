@@ -2,7 +2,13 @@
 
 ### Introduction
 - Today we're looking at C# 11, 12, 13, and 14 features that can improve our daily code
-- Many of these features are practical improvements that you can use today
+
+| .NET Version | C# Version | Release Date | Retirement Date
+|--------------|------------|--------------|----------------|
+| .NET 10.x | C# 14 | November 2025 | Nov 2028
+| .NET 9.x | C# 13 | November 2024 | Nov 2026
+| .NET 8.x | C# 12 | November 2023 | Nov 2026
+| .NET 7.x | C# 11 | November 2022 | May 2024
 
 ---
 
@@ -207,7 +213,7 @@ Embedded SQL, JSON, XML, YML are bad practices in general. However, there are ap
 **Notes:**
 - Useful for adding functionality to existing types without modifying them
 - Improves code readability and maintainability
-- 
+
 ### Demo 14:  Null Conditional Assignment
 
 **Key Points:**
